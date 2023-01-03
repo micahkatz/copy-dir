@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+if [ -z "$1" ]
+then
+    echo "Usage: copy-dir <old> <new>"
+else
+    rsync -rv --exclude=node_modules --exclude=.git $1/ $2
+fi
